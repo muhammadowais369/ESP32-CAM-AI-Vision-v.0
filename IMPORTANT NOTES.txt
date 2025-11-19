@@ -1,0 +1,71 @@
+API Dependency Notice
+This ESP32-CAM AI Vision v.0 project currently relies on external AI services provided by OperRouter.AI for threat and emotion detection capabilities. Users must obtain their own API credentials to utilize the full functionality of this system.
+
+Configuration Requirements
+1. API Credentials Setup
+Before deploying this system, you must:
+
+Register for an account at OperRouter.AI
+
+Generate your personal API KEY from their developer portal
+
+Obtain the specific model endpoint URL for your use case
+
+Configure these credentials in your project
+
+2. Security Considerations
+Never commit your actual API keys to version control
+
+The current implementation requires hardcoded credentials - consider this for development purposes only
+
+For production environments, implement secure credential storage or token rotation
+
+3. Current Implementation Status
+The codebase includes placeholder fields where you need to insert your OperRouter.AI credentials:
+
+cpp
+// config.h - UPDATE THESE VALUES WITH YOUR CREDENTIALS
+const char* OPERROUTER_API_KEY = "YOUR_OPERROUTER_API_KEY_HERE";
+const char* OPERROUTER_API_URL = "YOUR_OPERROUTER_MODEL_ENDPOINT_HERE";
+Cost and Service Limitations
+4. Service Dependencies
+Internet connectivity required for AI inference
+
+OperRouter.AI service availability directly impacts system functionality
+
+API rate limits and pricing apply based on OperRouter.AI's terms
+
+Model accuracy and performance depend on OperRouter.AI's current offerings
+
+5. Future Development Roadmap
+This dependency represents a temporary implementation approach. Future versions aim to include:
+
+On-device TensorFlow Lite models eliminating API dependencies
+
+Multiple AI provider support for redundancy
+
+Offline fallback modes for connectivity issues
+
+Immediate Action Required
+ Before using this project:
+
+Sign up for OperRouter.AI services
+
+Replace placeholder credentials with your actual API keys
+
+Review OperRouter.AI's pricing and usage policies
+
+Consider network security implications for your deployment
+
+Alternative Approaches
+For users concerned about API dependencies or ongoing costs, we recommend:
+
+Exploring local model deployment options
+
+Investigating open-source alternative models
+
+Implementing hybrid approaches for critical applications
+
+Note: The project maintainers are not affiliated with OperRouter.AI and cannot provide support for their services. Users are responsible for managing their API usage, costs, and compliance with OperRouter.AI's terms of service.
+
+Last Updated: Version 0 | External API Dependency Status: Required
